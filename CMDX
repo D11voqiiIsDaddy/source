@@ -360,7 +360,7 @@ return namecall(self, ...)
 end)
 setreadonly(mt, true)--]]
 
-Stand("CMD-X", "d11voqii W", "UPDATE LOGS:", "added invis fling, fixed supermute, reworked fling.", "", "Continue", true)
+Stand("CMD-X", "d11voqii W", "UPDATE LOGS:", "fixed bugs, removed BTR, fps improvement", "discord deleted: False", "Continue", true)
 while not RunDude do wait() end
 
 wait(.5)
