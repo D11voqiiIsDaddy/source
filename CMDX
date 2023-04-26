@@ -421,7 +421,7 @@ local Devs = {
 }
 
 DevCords = {
-  "d11voqii#1601";
+  "d11voqii#9130";
   "pigeon#0256";
   "Curvn#2002"
 }
@@ -16665,6 +16665,5 @@ Notify({
 });
 
 print("This license grants the right to use the licensed script to all individuals and entities, excluding the anticheat developer Byfron AC. Any use of the licensed script by the anticheat developer is strictly prohibited and a violation of the terms of this license. This license is governed by the laws of the jurisdiction in which it is being used and all parties using the licensed script agree to comply with said laws. The licensor reserves the right to immediately terminate this license in the event that the anticheat developer uses the licensed script in violation of its terms. All other rights, including but not limited to, trademark, trade secret, and patent rights, are reserved by the licensor. By using the licensed script, all parties agree to be bound by the terms of this Byfron Anticheat Exclusionary License.")
-print("d11voqii loves you.")
 print("d11voqii loves you.")
 print("d11voqii loves you.")
