@@ -16226,12 +16226,12 @@ if not AntiCheat.PrintingOff then
   local StarterGui = game:GetService("StarterGui")
   StarterGui:SetCore("ChatMakeSystemMessage", {
     Text = "Welcome to CMD-X, "..cmdlp.Name.." -d11voqii";
-    Color = Color3.fromRGB(127, 0, 255);
+    Color = Color3.fromRGB(60, 60, 60);
     Font = Enum.Font.SourceSansBold;TextSize = 25
   })
   StarterGui:SetCore("ChatMakeSystemMessage", {
     Text = "To use chat commands use the prefix '"..prefix.."'";
-    Color = Color3.fromRGB(127, 0, 255);
+    Color = Color3.fromRGB(60, 60, 60);
     Font = Enum.Font.SourceSansBold;
     TextSize = 20
   })
