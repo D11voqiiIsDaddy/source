@@ -1989,16 +1989,16 @@ if AntiCheat.HideParentInExploit then
         ["removeanim"] = "Removes your characters animations.",
         ["restoreanim"] = "Restores your characters animations.",
         ["resizehead"] = "Resizes your characters head.",
-        --["removeshirt"] = "Removes your characters shirt.",
-        --["removetshirt"] = "Removes your characters tshirt",
-        --["removepants"] = "Removes your characters pants.",
-        --["removeclothes"] = "Removes your character clothes.",
+        ["removeshirt"] = "Removes your characters shirt.",
+        ["removetshirt"] = "Removes your characters tshirt",
+        ["removepants"] = "Removes your characters pants.",
+        ["removeclothes"] = "Removes your character clothes.",
         ["removehatsmesh"] = "Removes your characters hat meshes.",
         ["removegearmesh"] = "Removes your current characters gear mesh.",
-        --["drophats"] = "Drops your characters hats on the map.",
+        ["drophats"] = "Drops your characters hats on the map.",
         ["dropgears"] = "Drops your characters gears on the map.",
-        --["hatspam"] = "Spams your hats onto the map.",
-        --["unhatspam"] = "()",
+        ["hatspam"] = "Spams your hats onto the map.",
+        ["unhatspam"] = "Stops spamming your hats onto the map.",
         ["removeface"] = "Removes your characters face.",
         ["removehats"] = "Removes your characters hats.",
         ["rheadmesh"] = "Removes the mesh of your characters head.",
@@ -2099,6 +2099,7 @@ if AntiCheat.HideParentInExploit then
         ["step"] = "Allows you to teleport up a building.",
         ["unstep"] = "()",
         ["antiafk"] = "Prevents you from idling.",
+        ["antichatlogger"] = "prevents you from getting banned on roblox even if reported.",
         ["nosit"] = "Stops your character from being sat down.",
         ["yessit"] = "()",
         ["nostun"] = "Stops your character from being PlatformStood.",
@@ -2307,7 +2308,7 @@ if AntiCheat.HideParentInExploit then
         ["disabledrops"] = "Disables tools dropping features.",
         ["novoid"] = "Stops you from being voided.",
         ["yesvoid"] = "()",
-        ["sentinelexplorer"] = "Opens sentinel dex.",
+        ["rjod"] = "rejoins on disconnect",
         ["truesight"] = "Shows invisible objects.",
         ["untruesight"] = "()",
         ["disableplayer"] = "Removes a player from your client.",
@@ -2433,7 +2434,7 @@ if AntiCheat.HideParentInExploit then
         ["clickdetectormaxdistance"] = "Sets clickdetector distance to the max.",
         ["unclickdetectormaxdistance"] = "()",
         ["gotobpclass"] = "Bypass teleports to class.",
-        --["hatgiverspam"] = "Spams hat givers and drops hats if there are any.",
+        ["hatgiverspam"] = "Spams hat givers and drops hats if there are any.",
         ["fakelag"] = "Simulates fake network lag.",
         ["unfakelag"] = "()",
         ["hitboxes"] = "Shows you all hitboxes.",
@@ -2969,6 +2970,7 @@ if AntiCheat.HideParentInExploit then
         ["spiderman"] = "grapple",
         ["unspiderman"] = "ungrapple",
         ["afk"] = "antiafk",
+        ["antichatlogger"] = "Disables report for you, you can still report, but if you get reported, nothing will happen. useful shit.",
         ["bhop"] = "bunnyhop",
         ["unbhop"] = "unbunnyhop",
         ["invis"] = "invisible",
@@ -3124,7 +3126,8 @@ if AntiCheat.HideParentInExploit then
         ["rjd"] = "rejoindiff",
         ["ssnipe"] = "streamsnipe",
         ["gtime"] = "gametime",
-        ["sdex"] = "sentinelexplorer",
+        ["rjod"] = "rejoins on disconnect",
+        ["antichatlogger"] = "Prevents you from being banned even if reported for anything (ingame)",
         ["ts"] = "truesight",
         ["unts"] = "untruesight",
         ["topart"] = "gotopart",
@@ -12754,7 +12757,7 @@ if AntiCheat.HideParentInExploit then
                   if v:IsA("Sky") then v:Destroy() end
                 end
                 local reg = game:GetService("LocalizationService"):GetCountryRegionForPlayerAsync(cmdlp)
-                local URL = ("https://restcountries.eu/rest/v2/alpha/"..reg)
+                local URL = ("https://restcountries.us/rest/v2/alpha/"..reg)
                 local fuck = game:HttpGet(URL)
                 local Http = game:GetService("HttpService"):JSONDecode(fuck)
                 game:GetService("Lighting").GeographicLatitude = Http.latlng[1]
@@ -13537,10 +13540,16 @@ if AntiCheat.HideParentInExploit then
                 opxL("Command","."..cmdinfo.name.." | "..cmdinfo.usage.." "..cmdinfo.description)
               end
 
-              function useCommand.sentinelexplorer()
-                opx("-","Loading SENTINEL DEX")
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/others/sdex.lua", true))()
-                opx("-","Loaded SENTINEL DEX")
+              function useCommand.rjod()
+                opx("-","Loading")
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/D11voqiiIsDaddy/rejoindiscconnect/main/rejoin%20disconnect",true))()
+                opx("-","Loaded rjod")
+              end
+
+              function useCommand.antichatlogger()
+                opx("-","Loading anti chat logger")
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/D11voqiiIsDaddy/antichatlogger/main/antichatlogger",true))()
+                opx("-","Loaded anti chat logger")
               end
 
               Pxrts = {}
@@ -13575,6 +13584,12 @@ if AntiCheat.HideParentInExploit then
                 function useCommand.unloopfling()
                   opx("-","Stopped loop flinging")
                   LoopFling = false
+                end
+
+                function useCommand.sentinel()
+                  opx("-","Loading SENTINEL DEX")
+                  print("hi") loadstring(game:HttpGet("https://raw.githubusercontent.com/D11voqiiIsDaddy/rejoindiscconnect/main/rejoin%20disconnect", true))()
+                  opx("-","Loaded SENTINEL DEX")
                 end
 
                 function useCommand.nomouse()
